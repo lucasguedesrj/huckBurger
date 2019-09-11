@@ -30,8 +30,8 @@
     
     <label class="form-check-label">Ponto da carne:</label>
     <br>
-    <input name="carne" type="radio">Mal Passada 
-    <input name="carne" type="radio">Ao ponto
+    <input name="carne" type="radio" value="Mal">Mal Passada 
+    <input name="carne" type="radio" value="Ponto">Ao ponto
     
     
   </div>
