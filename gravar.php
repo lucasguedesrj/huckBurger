@@ -20,21 +20,26 @@
 
     if($nome <> null && $tel <> null && $pao <> null && $carne <> null && $queijo <> null){
     
-    include "connect.php";
+        include "connect.php";
 
 
-    $sql = "INSERT INTO pedidos VALUES(null, '{$nome}', '{$tel}', '{$carne}', '{$pao}', '{$queijo}', '{$desc}')";
+        $sql = "INSERT INTO pedidos VALUES(null, '{$nome}', '{$tel}', '{$carne}', '{$pao}', '{$queijo}', '{$desc}')";
 
 
-    mysqli_query($con, $sql);
-        
-        echo "dados gravados com sucesso";
-        
+        if(mysqli_query($con, $sql)){
+
+            echo "dados gravados com sucesso";
+
+
+        }else{
+
+            echo "erro ao gravar";
+
+        }
         
     }else{
         
-        echo "erro ao gravar";
+        echo "Preencha os campos Vazios";
         
     }
-       
 ?>
